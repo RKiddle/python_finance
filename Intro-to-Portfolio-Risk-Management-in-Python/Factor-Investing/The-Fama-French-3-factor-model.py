@@ -2,7 +2,7 @@
 import statsmodels.formula.api as smf 
 
 # Define the regression formula
-FamaFrench_model = smf.ols(formula='Portfolio_Excess~Market_Excess~SMB~HML', data=FamaFrenchData)
+FamaFrench_model = smf.ols(formula='Portfolio_Excess ~ Market_Excess + SMB + HML', data=FamaFrenchData)
 
 # Fit the regression
 FamaFrench_fit = FamaFrench_model.fit()

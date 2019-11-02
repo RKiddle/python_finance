@@ -9,7 +9,6 @@ to calculate the total portfolio performance and print the results.
 """"
 
 
-
 # Calculate percentage returns
 returns = data.pct_change()
 
@@ -17,10 +16,10 @@ returns = data.pct_change()
 meanDailyReturns = returns.mean()
 
 # Define weights for the portfolio
-weights = np.array([ ____, ____, ____])
+weights = np.array([0.5, 0.2, 0.2, 0.1])
 
 # Calculate expected portfolio performance
-portReturn = np.____(____*____)
+portReturn = np.sum(meanDailyReturns*weights)
 
 # Print the portfolio return
-print(____)
+print(portReturn)
